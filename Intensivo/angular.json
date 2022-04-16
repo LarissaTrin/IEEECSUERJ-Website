@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "Aula": {
+    "Intensivo": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -20,7 +20,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/aula",
+            "outputPath": "dist/intensivo",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -31,7 +31,8 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.scss"
+              "node_modules/bootstrap/scss/bootstrap.scss",
+              "src/scss/styles.scss"
             ],
             "scripts": []
           },
@@ -72,10 +73,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "Aula:build:production"
+              "browserTarget": "Intensivo:build:production"
             },
             "development": {
-              "browserTarget": "Aula:build:development"
+              "browserTarget": "Intensivo:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -83,7 +84,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "Aula:build"
+            "browserTarget": "Intensivo:build"
           }
         },
         "test": {
@@ -99,7 +100,8 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.scss"
+              "node_modules/bootstrap/scss/bootstrap.scss",
+              "src/scss/styles.scss"
             ],
             "scripts": []
           }
@@ -107,5 +109,5 @@
       }
     }
   },
-  "defaultProject": "Aula"
+  "defaultProject": "Intensivo"
 }
